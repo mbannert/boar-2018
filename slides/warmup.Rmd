@@ -1,0 +1,86 @@
+---
+title: "Build Online Apps with R"
+subtitle: "Warm up"
+author: "Matthias Bannert"
+date: "30 Nov 2018"
+output: ioslides_presentation
+widescreen: true
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Goals
+
+- learn about visualization
+- solidify R (programming) skills 
+- Understand R-Ecosystem
+
+## Organization of the Course
+
+- group work (2-4 students)
+- Plenty of time in between sessions to recap and ask questions, study R 
+- Short documentation / course project description term paper (1-2 pages)
+- App project can be freely chosen
+- **Creating a GUI for any R package is blueprint for app ideas!**
+
+## Exam (Semesterleistung)
+
+**Grading Criteria (Individual Grades)**
+
+- Get an app done
+-  Idea of the app
+- delta (not absolute gain)
+- how you organize collaboration
+
+**HAND IN BEFORE SUBMISSION DEADLINE!**
+
+
+
+## You STILL know all of those, don't you?
+
+```{r,eval=F,echo=T}
+?sum()
+ls()
+c()
+matrix()
+data.frame()
+list()
+head()
+tail()
+str()
+function()
+lapply()
+```
+
+=> create your own R cheat sheets!
+
+## R Studio - Moving around
+
+- switch from console to script and back (Ctrl+1,2)
+- hashes indicate comments, multi-line comments: ctrl+shit+c
+- ctrl + enter run selected code 
+
+
+## Some simple (?) tasks?
+
+** Questions **
+
+  1. Download the MLB dataset and read it into R.
+  2. How many observations are in the dataset?
+  3. Who is the tallest / smallest player?
+  4. Are players older than 32 significantly heavier than younger players?
+  5. Create a function that converts inches to cm
+
+
+
+
+
+
+
+
+
+
+
