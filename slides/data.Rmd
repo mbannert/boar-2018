@@ -1,0 +1,172 @@
+---
+title: "Build Online Apps with R"
+subtitle: "Data"
+author: "Matthias Bannert"
+date: "30 Nov 2018"
+output: ioslides_presentation
+widescreen: true
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Data Generating Processes (DGP)
+
+- research (field / lab / surveys)
+- simulation
+- measuring
+- tracking
+- ... 
+
+## Types of Datasets: Time Series
+
+```{r}
+ts2 <- ts(rnorm(20),
+          start = c(1995,1),
+          frequency = 4)
+ts2
+```
+
+examples: monthly revenues over time, stocks,
+aggregated log files
+
+
+
+## Types of Datasets: Cross Sectional Data
+
+```{r}
+head(mtcars)
+```
+
+- multiple variables
+- one period
+
+
+
+## Types of Datasets: Panel Data
+
+- multiple variables
+- longitudinal data 
+- e.g. German Socio-Economic Panel (GSOEP)
+
+## Types of Datasets: Nested Data
+
+```{r}
+l <- list()
+l$element1 <- 2
+l$element2 <- head(mtcars,4)
+l
+```
+
+examples: meta information, sector classification (hierarchical), GDP components, translations, attributes, properties, [Geo spatial data](https://github.com/mbannert/maps/blob/master/ch_bfs_regions.geojson)
+
+## Task I: Dataset types
+
+Represent each of the following dataset types using R: 
+
+- time series
+- cross section
+- panel
+- a nested structure.
+
+Discuss suggest an in-memory representation (inside the R session) and a file based representation. 
+
+## Data Management
+
+**storage**
+
+- file based
+- database
+- relational
+- non-relational
+- hybrid solutions
+- centralized / decentralized 
+
+**granularity**
+
+- micro data / on-the-fly computation (e.g. OLAP cubes)
+- aggregated data 
+
+## An Exploring Datasets Strategy: Reading Data
+
+Read data into R
+- readr package
+- foreign package
+- openxlsx
+
+## An Exploring Datasets Strategy: Checking Data    
+
+Check whether it worked
+- head()
+- tail()
+- str()
+- ls()
+
+## An Exploring Datasets Strategy: Get to Know the Data    
+
+Get and idea of the data
+- summary
+- distribution
+- missing values
+- scatter plots
+
+## Task II: Scaling it up
+
+1. Install the *fivethirtyeight* package
+
+2. pick your favorite dataset
+
+3. explore the dataset, report your findings (summary stats, visual)
+
+4. How can we do this for multiple datasets? Write a function to get a summary statistics for every
+dataset in fivethirtyeight... 
+
+
+## Data Sources
+
+- official statistics ([Live Stream on Election Day](https://opendata.swiss/de/dataset/echtzeitdaten-am-abstimmungstag))
+- universities
+- journals
+- open data repositories ([nature on opendata](- https://www.nature.com/news/peer-review-activists-push-psychology-journals-towards-open-data-1.21549), [presentation on opendata in R by Thomas Lo Russo](https://openzh.github.io/opendata_and_r))
+- commercial providers, e.g., https://www.kaggle.com/datasets
+
+## Example Sources: Websites
+
+- https://opendata.swiss/de/
+- http://data.europa.eu/
+- https://opentransportdata.swiss/en/
+- http://opendata.cern.ch/
+- https://www.apa.org/research/responsible/data-links.aspx
+
+## API example: the KOF data API
+
+```{r}
+library(kofdata)
+library(tstools)
+tsplot(get_time_series("ch.kof.barometer"))
+## remember the :: syntax to quickly explore
+## functions of a (small) package
+## kofdata:: + 'hit tab'
+```
+
+## List of API Wrappers
+
+- https://github.com/RomanTsegelskyi/r-api-wrappers
+- ... 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
