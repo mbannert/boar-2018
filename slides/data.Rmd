@@ -92,6 +92,7 @@ Discuss suggest an in-memory representation (inside the R session) and a file ba
 ## An Exploring Datasets Strategy: Reading Data
 
 Read data into R
+
 - readr package
 - foreign package
 - openxlsx
@@ -99,6 +100,7 @@ Read data into R
 ## An Exploring Datasets Strategy: Checking Data    
 
 Check whether it worked
+
 - head()
 - tail()
 - str()
@@ -107,6 +109,7 @@ Check whether it worked
 ## An Exploring Datasets Strategy: Get to Know the Data    
 
 Get and idea of the data
+
 - summary
 - distribution
 - missing values
@@ -142,7 +145,7 @@ dataset in fivethirtyeight...
 
 ## API example: the KOF data API
 
-```{r}
+```{r, message=FALSE, warning=FALSE}
 library(kofdata)
 library(tstools)
 tsplot(get_time_series("ch.kof.barometer"))
