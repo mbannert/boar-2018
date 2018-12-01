@@ -19,6 +19,12 @@ here: https://github.com/mbannert/boar-2018-code
 [GIS Stackexchange](http://gis.stackexchange.com/)
 
 
+Hint: how to install spDataLarge 
+
+```r
+install.packages("spDataLarge", repos="https://nowosad.github.io/drat/",type = "source") 
+```
+
 ### Maps Examples
 
 [KOF Globalization Index](https://www.kof.ethz.ch/en/forecasts-and-indicators/indicators/kof-globalisation-index.html)
